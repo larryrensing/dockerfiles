@@ -10,7 +10,7 @@ echo "register-rack-controller URL: $MAAS_REGION_UI_SERVICE_HOST"
 # register forever
 while [ 1 ];
 do
-	if maas-rack register --url=http://${MAAS_REGION_UI_SERVICE_HOST}/MAAS --secret="3858f62230ac3c915f300c664312c63f";
+	if maas-rack register --url=http://${MAAS_REGION_UI_SERVICE_HOST}/MAAS;
 	then
 		echo "Successfully registered with MaaS Region Controller"
 		break

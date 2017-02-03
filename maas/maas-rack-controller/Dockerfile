@@ -31,7 +31,6 @@ RUN systemctl enable rsyslog.service
 RUN rsyslogd; apt-get install -y maas-cli maas-rack-controller
 
 COPY scripts/register-rack-controller.sh /usr/local/bin
-RUN chmod +x /usr/local/bin/register-rack-controller.sh
 
 # register ourselves with the region controller
 COPY scripts/register-rack-controller.service /lib/systemd/system/register-rack-controller.service

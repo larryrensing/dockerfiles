@@ -6,6 +6,7 @@ After=network-online.target
 [Service]
 Type=oneshot
 PassEnvironment=MAAS_REGION_UI_SERVICE_HOST
+ExecStartPre=/bin/chmod +x /usr/local/bin/register-rack-controller.sh
 ExecStart=/usr/local/bin/register-rack-controller.sh
 
 [Install]
